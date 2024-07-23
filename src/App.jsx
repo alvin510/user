@@ -1,16 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
-import Layout from "./components/navbar/Layout";
-import HomePage from "./user/homepage/Homepage";
-import Profile from "./user/profile/Profile";
-import ProfileDetail from "./user/profile/ProfileDetail";
-import Blog from "./user/blog/Blog";
-import Media from "./user/media/media";
-import DetailBlog from "./user/blog/DetailBlog";
-import Pengumuman from "./user/pengumuman/Pengumuman";
-import PengumumanDetail from "./user/pengumuman/PengumumanDetail";
-import Login from "./components/login/login";
 import Dashboard from "./admin/dashboard/home";
 import AdminLay from "./components/navbar/AdminLay";
 import JadwalAdd from "./admin/jadwal/addJawal";
@@ -34,16 +24,15 @@ import AdminMediaShow from "./admin/media/mediaShow";
 
 // Koneksi API
 axios.defaults.baseURL = "http://stmikaelsemarangindah.site";
-// axios.defaults.baseURL = "http://localhost:4000";
 axios.defaults.withCredentials = true;
 
 function App() {
   return (
     <>
       <Routes>
-        <Route element={<Layout />}>
+        {/* <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login-admin-panel" element={<Login />} />
           <Route path="/media" element={<Media />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/:id" element={<ProfileDetail />} />
@@ -51,9 +40,9 @@ function App() {
           <Route path="/blog/:id" element={<DetailBlog />} />
           <Route path="/pengumuman" element={<Pengumuman />} />
           <Route path="/pengumuman/:id" element={<PengumumanDetail />} />
-        </Route>
+        </Route> */}
         <Route>
-          <Route path="/dashboard" element={<AdminLay />}>
+          <Route path="/" element={<AdminLay />}>
             <Route index element={<Dashboard />} />
             <Route path="/dashboard/jadwal-add" element={<JadwalAdd />} />
             <Route path="/dashboard/jadwal-show" element={<JadwalShow />} />
